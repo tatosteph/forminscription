@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulaire</title>
+  <link rel="stylesheet" href="form.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+  <script type="text/javascript" type="text/javascript">
+    Parse.initialize("j184XZ7KWqaYayWEquK42Lcy6i6SffeylQip2BYu",
+      "RNAgo4UGpaOenG7o2WK8UVuGVlLmFSFqkO8jChf4", "Pt3bcy4A9uWxe05MWI6gCgV6lRSWXk2k6c03yWaY"
+    ); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    Parse.serverURL = 'https://parseapi.back4app.com/'
+  </script>
+</head>
+
+<body class="bg-gray-50 flex flex-col items-center justify-center min-h-screen py-8">
+
+  <h2 class="text-xl font-semibold mb-4">Sélectionner un Meeting</h2>
+
+  <select id="meeting-select" onchange="filtrerParMeeting()" class="mb-8 p-2 rounded border border-gray-300">
+    <option value="">Tous les Meetings</option>
+    <!-- Les options seront ajoutées ici par le JavaScript -->
+  </select>
+
+  <h2 class="text-xl font-semibold">Utilisateurs</h2>
+  <ul id="liste-utilisateurs" class="list-disc pl-5 mt-4">
+    <!-- Les utilisateurs seront listés ici -->
+  </ul>
+  <script src="form.js"></script>
+
+</body>
+
+</html>
